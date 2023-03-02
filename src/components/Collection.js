@@ -1,26 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
-import axios from "axios";
 
-import {
-  useContract,
-  useNFTs,
-  useContractMetadata,
-  ThirdwebNftMedia,
-} from "@thirdweb-dev/react";
-// import { create } from "ipfs-http-client";
 
 // INTERNAL IMPORT
 import { HealthContext } from "../Context/HealthCareContext";
-//INTERNAL IMPORT
-import { connectingWithContractNFT } from "../Utils/apiFeature";
 
 const Collection = () => {
   const { nftcolabName, nftaddresses, totalMints, tokenIdCounter,dataa } =
     useContext(HealthContext);
-    // const [dataaa, setdataaa] = useState("");
-
-    
-  // const baseURL = "https://ipfs.io/ipfs/QmZ1ngC8FUGfcAL7YB7BUDXweHxyLmvsSZaoprfg3KEAQD";
 
   return (
     <div>
@@ -30,8 +16,6 @@ const Collection = () => {
           <div className="row g-0">``
             <div className="col-md-4">
               <img src={dataa.image} className="img-fluid rounded-start" alt="..." />
-              {/* <img src={dataa.image} className="img-fluid rounded-start" alt="..." /> */}
-              {/* <img src={dataaimage} className="img-fluid rounded-start" alt="..." /> */}
             </div>
             <div className="col-md-8">
               <div className="card-body">

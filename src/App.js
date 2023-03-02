@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { ethers } from "ethers";
-// import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
+import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 

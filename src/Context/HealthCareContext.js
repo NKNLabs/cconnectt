@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { ethers } from "ethers";
-import { Link } from "react-router-dom";
 
-import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
+import { useAddress } from "@thirdweb-dev/react";
 // import { useRouter } from "next/router";
 
 //INTERNAL IMPORT
 import {
-  ChechIfWalletConnected,
   connectWallet,
   connectingWithContractNFTColab,
   connectingWithContractNFT,

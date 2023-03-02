@@ -1,9 +1,4 @@
 import React, {  useState } from "react";
-// import { useAddress } from "@thirdweb-dev/react";
-// import { Link } from "react-router-dom";
-// import Button from "react-bootstrap/Button";
-// import { HealthContext } from "../Context/HealthCareContext";
-// // import { HealthContext } from "../Context/HealthCareContext";
 import { ethers } from "ethers";
 import "./form.css"
 
@@ -11,7 +6,6 @@ import "./form.css"
 import { connectingWithContractTEST } from "../Utils/apiFeature";
 
 const OnlyCollab = () => {
-  // const {utils} = ethers;
 
 
   const [loading, setLoading] = useState(false);
@@ -24,35 +18,16 @@ const OnlyCollab = () => {
   });
 
   async function registerCandidate() {
-    // e.preventDefault();
-    // console.log("handle request ");
-
-    // get the name from formdata
     
     const colabname = formParamsdetail.colabname; 
     const addresses = formParamsdetail.address; 
     const fees = formParamsdetail.fee; 
-    // const addressArray = addresses.map((address)=>{utils.getAddress(address)});
-    // const encodeArray = ethers.utils.defaultAbiCoder.encode(["uint256[]"],[fees])
-    // console.log(colabname)
-    // console.log(addresses)
-    // console.log(fees)
-    // console.log(fees.parseInt());
-    // const colabname = formParamsdetail.colabname; 
 
     const contract = await connectingWithContractTEST();
     
-    const getCreatedUser = await contract.createTask({
-      // // addresses,fees,colabname
-      // _payees:addresses,
-      // // _shares:fees.toFormat,
-      // _shares:FixedNumber.fromString(fees, number),
-      // _colabwith:colabname
-      // _payees:["0x1aE421797858aD2E4a0EcaaA7c464f03d59C91f1","0x6271A735BCEcA1236113039Bd4a429Bab72193dC"],
-      // _shares:[35,65],
-      // _colabwith:"ljdfsadlj"
-      // _payees:addresses,
-      // _shares:fees,
+    const getCreatedUser = await contract.OnlyOwnerInherit({
+      _payees:addresses,
+      _shares:fees,
       _colabwith:colabname
     });
 
@@ -173,16 +148,6 @@ const OnlyCollab = () => {
                 >
                   Submit
                 </button>
-                {/* <button
-                  onClick={Test({
-                    add: formParamsdetail.address,
-                    fees: formParamsdetail.fee,
-                    name: formParamsdetail.colabname,
-                  })}
-                  className=""
-                >
-                  Submit
-                </button> */}
               </form>
             </div>
           </div>

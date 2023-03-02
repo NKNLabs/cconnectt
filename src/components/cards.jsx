@@ -1,27 +1,14 @@
-import React, { useContext, useEffect, useState } from "react";
-import axios from "axios";
+import React, { useContext} from "react";
 import "./cardhover.css"
 
-import {
-  useContract,
-  useNFTs,
-  useContractMetadata,
-  ThirdwebNftMedia,
-} from "@thirdweb-dev/react";
-// import { create } from "ipfs-http-client";
 
 // INTERNAL IMPORT
 import { HealthContext } from "../Context/HealthCareContext";
 //INTERNAL IMPORT
-import { connectingWithContractNFT } from "../Utils/apiFeature";
 
 const Cards = () => {
   const { nftcolabName, nftaddresses, totalMints, tokenIdCounter,dataa,dataaimage } =
     useContext(HealthContext);
-    const [dataaa, setdataaa] = useState("");
-
-    
-  // const baseURL = "https://ipfs.io/ipfs/QmZ1ngC8FUGfcAL7YB7BUDXweHxyLmvsSZaoprfg3KEAQD";
 
   return (
    

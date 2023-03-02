@@ -5,7 +5,6 @@ import { HealthContext } from "../Context/HealthCareContext";
 import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import MyVerticallyCenteredModal from "./Modal";
-import Modal from "react-bootstrap/Modal";
 import "./Navbar.css";
 import { ethers } from "ethers";
 import lighthouse from "@lighthouse-web3/sdk";
@@ -111,11 +110,8 @@ const Dash = () => {
               <article className="card">
                 <div className="card-header">
                   <div className="divbox">
-                    {/* <span><img src="https://th.bing.com/th/id/OIP.LUG6AerNQHqaJHk0ft87OAHaEo?w=285&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" /></span> */}
                     <h4 className="address">Address</h4>
-                    {/* <img src={qrimage} alt="qr" /> */}
                     <MyVerticallyCenteredModal
-                      // qr={qrimage}
                       qradd={qradd}
                       show={modalShow}
                       onHide={() => setModalShow(false)}
