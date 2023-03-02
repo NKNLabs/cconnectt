@@ -1,0 +1,20 @@
+.bt{
+    height:200px;
+    width:600px;
+    color:rgb(47, 41, 41);
+    font-size: 40px;
+    background-color: rgb(30, 205, 126);
+  
+     border-radius: 25px;
+  }
+  .bt:hover{
+     color:white;
+     background-color: rgb(218, 68, 218);
+  
+     transition-duration: 0.5s;
+    
+  }
+  .gh{
+   display:flex;
+   padding:200px;
+  }

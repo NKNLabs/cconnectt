@@ -1,0 +1,26 @@
+.nonboot{
+    font-weight: 800;
+}
+
+.qrimg{
+    display: flex;
+    justify-content: center;
+}
+.add{
+    color: black;
+    font-size: 1.5rem;
+}
+
+.qr{
+    height: 500px;
+}
+.address{
+    color: black;
+}
+.btnadd{
+    margin-left: 11rem;
+}
+
+.marg{
+    margin-top: 20px;
+}
